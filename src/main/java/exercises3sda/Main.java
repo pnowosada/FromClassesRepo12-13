@@ -18,5 +18,15 @@ public class Main {
         cat1.eatMouse();
         cat2.eatMouse();
         cat3.eatMouse();
+
+        Dog dog1= new Dog("Pimpek");
+        Dog dog2= new Dog("Azor");
+        Dog dog3= new Dog("Reks");
+
+        dog1.makeSound();
+        dog2.makeSound();
+        dog3.makeSound();
+
+
     }
 }

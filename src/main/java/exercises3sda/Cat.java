@@ -33,7 +33,7 @@ public class Cat {
     public Integer getMouseCounter(){
         return this.mouseCounter;
     }
-    
+
     public void makeSound() {
         System.out.println(this.name + " goes meow!!!");
     }
