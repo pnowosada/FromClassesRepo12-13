@@ -5,43 +5,53 @@ import lombok.Setter;
 
 import javax.print.DocFlavor;
 
-public class Cat implements Animals{
+public class Cat extends AbstractAnimal implements Animals,Movable{
 
-    private String name;
-    private Integer mouseCounter;
+    private Integer miceCounter;
 
     public Cat(String name) {
-        this.name = name;
-        this.mouseCounter = 0;
+        super(name);
+        this.miceCounter = 0;
     }
 
-    public Cat(String name, Integer mouseCounter) {
-        this.mouseCounter = mouseCounter;
-        this.name = name;
+    public Cat(String name, Integer miceCounter) {
+        super(name);
+        this.miceCounter = miceCounter;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public void setMiceCounter(Integer miceCounter) {
+        this.miceCounter = miceCounter;
     }
 
-    public String getName() {
-        return name;
+    public Integer getMiceCounter() {
+        return this.miceCounter;
     }
-    public void setMouseCounter(Integer mouseCounter){
-        this.mouseCounter=mouseCounter;
-    }
-    public Integer getMouseCounter(){
-        return this.mouseCounter;
-    }
+
     @Override
     public void makeSound() {
-        System.out.println(this.name + " goes meow!!!");
+        System.out.println(this.name + " goes meow!!!!");
     }
 
+
     public void eatMouse() {
-        this.mouseCounter++;
-        //this.mouseCounter= this.mouseCounter +1 ; to jest to samo
-        System.out.println("Zjadłem myszy " + mouseCounter + " myszy");
+        this.miceCounter++;
+        //this.miceCounter = this.miceCounter + 1;
+        System.out.println("Zjadłem myszy" + miceCounter + "myszy");
+    }
+
+    @Override
+    public String move(){
+        System.out.println("Idę wcześniej");
+        return "Idę";
+    }
+
+    @Override
+    public String toString() {
+        return "Cat{" +
+                "name='" + name + '\'' +
+                ", miceCounter=" + miceCounter +
+                '}';
     }
 
 

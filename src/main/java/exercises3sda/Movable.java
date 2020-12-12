@@ -1,2 +1,6 @@
-package exercises3sda;public interface Movable {
+package exercises3sda;
+
+public interface Movable {
+    String move ();
+
 }

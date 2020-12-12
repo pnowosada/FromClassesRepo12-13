@@ -1,13 +1,12 @@
 package exercises3sda;
 
-public class Dog implements Animals{
-    private String name;
-
-    public Dog(String name){
-        this.name=name;
+public class Dog extends AbstractAnimal implements Animals{
+    public Dog(String name) {
+        super(name);
     }
+
     @Override
-    public void makeSound(){
-        System.out.println(name + "woff woff " );
+    public void makeSound() {
+        System.out.println(this.name + " woff woff");
     }
 }
