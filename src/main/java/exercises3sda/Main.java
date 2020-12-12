@@ -27,6 +27,14 @@ public class Main {
         dog2.makeSound();
         dog3.makeSound();
 
-
+        System.out.println("Exercise 5 \n");
+        List<Animals>animals=new ArrayList<>();
+        animals.add(cat1);
+        animals.add(dog1);
+        animals.add(cat2);
+        animals.add(dog2);
+        for(Animals animal :animals){
+            animal.makeSound();
+        }
     }
 }
