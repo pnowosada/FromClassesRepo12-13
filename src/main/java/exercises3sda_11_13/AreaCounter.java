@@ -13,7 +13,7 @@ public class AreaCounter {
     public static boolean checkArea(double area,List<Figure>figures){
         Double result = countArea(figures);
 
-        return result<=a ;
+        return result<=area ;
 
     }
 }
